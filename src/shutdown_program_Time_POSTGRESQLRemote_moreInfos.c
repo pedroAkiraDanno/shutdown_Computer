@@ -258,7 +258,36 @@ WINDOWS
 
 
 LINUX:
-        gcc -o shutdown_logger shutdown_logger.c -lpq ./shutdown_logger        
+        gcc -o shutdown_program_Time_POSTGRESQLRemote_moreInfos shutdown_program_Time_POSTGRESQLRemote_moreInfos.c -lpq ./shutdown_program_Time_POSTGRESQLRemote_moreInfos        
+
+
+
+
+
+
+
+
+
+LINUX preparation: 
+
+        ### login server:
+        ### On Ubuntu ###
+        sudo su -
+        sudo apt update  --yes
+        sudo apt-get update && sudo apt-get upgrade -y
+        apt list --upgradable
+        sudo apt-get install -y gcc
+        sudo apt-get install build-essential
+        ## Installing Clang on Linux
+        sudo apt install -y clang
+
+
+        sudo apt install postgresql postgresql-contrib
+        sudo service postgresql start
+        sudo -u postgres psql -c "SELECT version();"
+
+        sudo apt-get install libpq-dev
+
 
 
 
